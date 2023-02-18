@@ -5,7 +5,7 @@ description: Detects uncommon or suspicious child processes spawning from a VsCo
 references:
     - https://twitter.com/nas_bench/status/1618021838407495681
     - https://twitter.com/nas_bench/status/1618021415852335105
-author: Nasreddine Bencherchali
+author: Nasreddine Bencherchali (Nextron Systems)
 date: 2023/01/26
 tags:
     - attack.execution
@@ -48,5 +48,5 @@ detection:
             - 'C:\Temp\'
     condition: selection_parent and 1 of selection_children_*
 falsepositives:
-    - In development environment where VsCode is used heavily. False positives may occure when developers use task to compile or execute different types of code. Remove or add processes accordingly
+    - In development environment where VsCode is used heavily. False positives may occur when developers use task to compile or execute different types of code. Remove or add processes accordingly
 level: medium
